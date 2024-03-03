@@ -1,7 +1,7 @@
 const shops = require("./shops");
-// const medicines = require("./medicines");
+const medicines = require("./medicines");
 
 module.exports = {
   shops,
-  // medicines,
+  medicines,
 };
