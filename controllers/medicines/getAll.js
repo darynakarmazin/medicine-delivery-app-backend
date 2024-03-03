@@ -2,18 +2,16 @@ const { Medicine } = require("../../models");
 
 const getAll = async (req, res, next) => {
   try {
-    const { _id } = req.user;
-    const medicines = await Medicine.find({ owner: _id }).populate(
+    const { _id } = req.body;
+    const medicines = await Medicine.find({ "owner._id": _id }).populate(
       "owner",
-      "_id,  name"
+      "_id name"
     );
-    res.json(
-      res.json({
-        status: "success",
-        code: 200,
-        data: { result: medicines },
-      })
-    );
+    res.json({
+      status: "success",
+      code: 200,
+      data: { result: medicines },
+    });
   } catch (error) {
     next(error);
   }
