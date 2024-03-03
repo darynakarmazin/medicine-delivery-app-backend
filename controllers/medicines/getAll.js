@@ -2,7 +2,7 @@ const { Medicine } = require("../../models");
 
 const getAll = async (req, res, next) => {
   try {
-    const { _id } = req.body;
+    const { _id } = req.query;
     const medicines = await Medicine.find({ owner: _id }).populate(
       "owner",
       "_id name"
