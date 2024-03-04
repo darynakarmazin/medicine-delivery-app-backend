@@ -6,6 +6,7 @@ const orderSchema = Joi.object({
   phone: Joi.required(),
   address: Joi.required(),
   medicines: Joi.required(),
+  amount: Joi.required(),
 });
 
 module.exports = orderSchema;

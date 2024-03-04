@@ -7,6 +7,7 @@ const medicineSchema = Schema({
     type: Schema.Types.ObjectId,
     ref: "shop",
   },
+  amount: { type: String, required: true },
 });
 
 const orderSchema = Schema(
