@@ -18,6 +18,7 @@ const cors = require("cors");
 
 const shopsRouter = require("./routes/api/shops");
 const medicinesRouter = require("./routes/api/medicines");
+const ordersRouter = require("./routes/api/orders");
 
 const app = express();
 
@@ -29,5 +30,6 @@ app.use(express.json());
 
 app.use("/api/shops", shopsRouter);
 app.use("/api/medicines", medicinesRouter);
+app.use("/api/orders", ordersRouter);
 
 module.exports = app;
